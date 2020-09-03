@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd
+        ">
+        
+        
+        
+	<!-- 需要扫描的包路径 ，指定com.yc.snack下面的所有包要扫描-->
+	<context:component-scan base-package="com.yc.snack" use-default-filters="false">
+	
+	<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RequstBody"></context:include-filter>
+	<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RequstMapping"></context:include-filter>
+	<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.PathVariable"></context:include-filter>
+	<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.GetMapping"></context:include-filter>
+	<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.PostMapping"></context:include-filter>
+	<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.PostMapping"></context:include-filter>
+	<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RequstMapping"></context:include-filter>
+	</context:component-scan>
+	
+	
+	<!-- 静态资源 -->
+	<mvc:default-servlet-handler/>
+	<!-- 启用mvc注解 -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<!-- 拦截配置 -->
+	
+	</beans>
+	
+	
+	
+	
+	
+	
